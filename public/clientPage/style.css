@@ -1,0 +1,52 @@
+body{
+  background-color: #9BA7BF;
+  font-family: 'Intel One Mono', monospace;
+  font-size: large;
+}
+
+.top-nav:hover{
+    color:#F2EFDF;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#left, #right {
+  width: 50%;
+  padding: 10px;
+}
+
+#left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+
+.dots {
+  position: absolute;
+  color: #607EA6;
+  width: 400px;
+  height: 120px;
+  top: 150px;
+  left: 350px;
+  background-image: radial-gradient(#000 1px, transparent 1px);
+  background-size: 6px 6px;
+  z-index: 3;
+}
+
+.text{
+  font-size: 30px;
+}
+
+
+
+
+
+

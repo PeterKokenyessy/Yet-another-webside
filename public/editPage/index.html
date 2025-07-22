@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GiftEditor</title>
+    <title>GifEditor</title>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div id="root"></div>
-    hello editor
+
+<body id="main-body" style="background-color:#8368a5">
+    <form id="search-form">
+        <input type="text" id="search-input" placeholder="Search for gifs...">
+        <button id = "search-button" type="submit">Search</button>
+    </form>
+
+    <div id="root">
+        <div id="editor-view">
+        <ul id="gif-list">
+        </ul>
+    </div>
 </body>
+
 </html>
