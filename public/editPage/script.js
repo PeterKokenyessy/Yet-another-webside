@@ -1,21 +1,36 @@
-let gifApiTopic = "goofy-cats";
-let allGifsDatas = `https://api.giphy.com/v1/gifs/search?api_key=JTQ5tRcYUqk9fTAmpaiMe85s9UTGPlJy&q=${gifApiTopic}&limit=30`
 
 const loadEvent = async function () {
+    const apiPathData = await getDataFromApi("http://localhost:6969/api/details");
+    console.log(`API Path Data:`, apiPathData);
+    const apiPath = `${apiPathData[0].apiAllGifsDatas}${apiPathData[0].gifApiTopic}${apiPathData[0].maxLimit}`; 
+    console.log(`API Path:`, apiPath);
+    
     const root = document.getElementById("main-body");
     const searchButton = document.getElementById("search-button");
+    
     await searchButton.addEventListener("click", async function () {
+        console.log(`Search button clicked`);
         const searchInput = document.getElementById("search-input");
-        gifApiTopic = searchInput.value;
-        const newApiUrl = `https://api.giphy.com/v1/gifs/search?api_key=JTQ5tRcYUqk9fTAmpaiMe85s9UTGPlJy&q=${gifApiTopic}&limit=30`;
-        const newData = await getDataFromApi(newApiUrl);    
+        apiPathData[0].gifApiTopic = searchInput.value;
+        const newApiUrl = `https://api.giphy.com/v1/gifs/search?api_key=JTQ5tRcYUqk9fTAmpaiMe85s9UTGPlJy&q=${apiPathData[0].gifApiTopic}&limit=30`;
+        const newData = await getDataFromApi(newApiUrl);
+        // max length input !!!
         console.log(`New data:`, newData);
+
+        await sendApiDataToServer(apiPathData[0].gifApiTopic, apiPathData[0].maxLimit);
+        await sendDataToServer(newData.data);
+
+
+        const currentData = await getDataFromApi("http://localhost:6969/api/gifs");
+        console.log(`Current data:`, currentData);
+        console.log(`Current data length:`, currentData.length);
+
         const gifList = document.getElementById("gif-list");
         gifList.innerHTML = ""; 
-        listGifs(gifList, newData.data);
+        listGifs(gifList, currentData);
     });
 
-    const datas = await getDataFromApi(allGifsDatas)
+    const datas = await getDataFromApi(apiPath)
     console.log(`Result:`, datas)
 
     await sendDataToServer(datas.data)
@@ -31,7 +46,6 @@ const loadEvent = async function () {
     const gifList = document.getElementById("gif-list");
     gifList.innerHTML = "";
     listGifs(gifList, currentData);
-
 };
 
 async function getDataFromApi(api) {
@@ -57,6 +71,35 @@ function createTagElement(tag, className, textContent) {
         element.textContent = textContent;
     }
     return element;
+}
+async function sendApiDataToServer(gifApiTopic, maxLimit){
+    let newData = {
+        "gifApiTopic": gifApiTopic,
+        "apiAllGifsDatas": "https://api.giphy.com/v1/gifs/search?api_key=JTQ5tRcYUqk9fTAmpaiMe85s9UTGPlJy&q=",
+        "maxLimit": maxLimit
+    }
+    const jsonData = JSON.stringify(newData);
+    try {
+        const response = await fetch('http://localhost:6969/api/details', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: jsonData
+        });
+
+        if (!response.ok) {
+            throw new Error("Error at the server site");
+        }
+
+        const serverResponse = await response.json();
+        console.log("Server response:", serverResponse);
+
+    }
+    catch (error) {
+        console.error("Error at file sending:", error);
+    }
+
 }
 
 async function sendDataToServer(data) {
@@ -94,8 +137,7 @@ async function sendDataToServer(data) {
 
 function listGifs(gifList, data) {
     data.forEach(products => {
-        const productItem = document.createElement("li"); // <li> helyett <div>
-        productItem.classList.add("product-item");
+        const productItem = document.createElement("li"); 
 
         const img = document.createElement("img");
         img.src = products.url;

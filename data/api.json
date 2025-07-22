@@ -1,0 +1,7 @@
+[
+  {
+    "gifApiTopic": "shit myself",
+    "apiAllGifsDatas": "https://api.giphy.com/v1/gifs/search?api_key=JTQ5tRcYUqk9fTAmpaiMe85s9UTGPlJy&q=",
+    "maxLimit": "&limit=30"
+  }
+]

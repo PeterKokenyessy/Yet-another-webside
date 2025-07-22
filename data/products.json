@@ -1,12 +1,15 @@
 [
   {
+<<<<<<< HEAD
     "url": "https://media3.giphy.com/media/v1.Y2lkPTdlOTMwZjg3bmc2ajZvM21sc3VvdXVwczAwYTNnNWZmcWNjNWtianUzYXBidnh6ciZlcD12MV9naWZzX3NlYXJjaCZjdD1n/mJqQXx8vK9kD6/giphy.gif",
+=======
+    "url": "https://media1.giphy.com/media/v1.Y2lkPTdlOTMwZjg3NDBydXppcmx4azMxc2w1eHk3ZTJiYmEzb3E3Ymp4ajV3MXE0cXdzZCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/T5S2baHKApwgE/giphy.gif",
+>>>>>>> 2a4d8c0bc7e06c0ed8498d37af099c47b4873421
     "title": [
-      "cats",
-      "cat",
-      "gifs",
+      "poo",
       "GIF"
     ],
+<<<<<<< HEAD
     "price": 5.4
   },
   {
@@ -168,41 +171,99 @@
   },
   {
     "url": "https://media1.giphy.com/media/v1.Y2lkPTdlOTMwZjg3bmc2ajZvM21sc3VvdXVwczAwYTNnNWZmcWNjNWtianUzYXBidnh6ciZlcD12MV9naWZzX3NlYXJjaCZjdD1n/9ixP32L9ts7QzcmiB2/giphy.gif",
+=======
+    "price": 5.5
+  },
+  {
+    "url": "https://media1.giphy.com/media/v1.Y2lkPTdlOTMwZjg3NDBydXppcmx4azMxc2w1eHk3ZTJiYmEzb3E3Ymp4ajV3MXE0cXdzZCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/m1Q4Q3ujyDj4Q/giphy-downsized-medium.gif",
+>>>>>>> 2a4d8c0bc7e06c0ed8498d37af099c47b4873421
     "title": [
-      "Doja",
-      "Cat",
-      "Laughing",
+      "Shit",
+      "Your",
+      "Pants",
+      "Poop",
+      "GIF",
+      "by",
+      "Four",
+      "Rest",
+      "Films"
+    ],
+    "price": 4
+  },
+  {
+    "url": "https://media2.giphy.com/media/v1.Y2lkPTdlOTMwZjg3NDBydXppcmx4azMxc2w1eHk3ZTJiYmEzb3E3Ymp4ajV3MXE0cXdzZCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Y3FV9Cz8EStVK/giphy.gif",
+    "title": [
+      "Animated",
+      "GIF"
+    ],
+    "price": 5.7
+  },
+  {
+    "url": "https://media4.giphy.com/media/v1.Y2lkPTdlOTMwZjg3NDBydXppcmx4azMxc2w1eHk3ZTJiYmEzb3E3Ymp4ajV3MXE0cXdzZCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/v5yMEzbNv5DzBVkwfr/giphy.gif",
+    "title": [
+      "Scared",
+      "Jason",
+      "Segel",
       "GIF",
       "by",
       "Apple",
-      "Music"
+      "TV+"
     ],
+<<<<<<< HEAD
     "price": 2.4
   },
   {
     "url": "https://media1.giphy.com/media/v1.Y2lkPTdlOTMwZjg3bmc2ajZvM21sc3VvdXVwczAwYTNnNWZmcWNjNWtianUzYXBidnh6ciZlcD12MV9naWZzX3NlYXJjaCZjdD1n/DCWNqpHOoxABCnSJTu/giphy.gif",
+=======
+    "price": 7.5
+  },
+  {
+    "url": "https://media4.giphy.com/media/v1.Y2lkPTdlOTMwZjg3NDBydXppcmx4azMxc2w1eHk3ZTJiYmEzb3E3Ymp4ajV3MXE0cXdzZCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/c7f4S3u8XbYMo/giphy-downsized-medium.gif",
+>>>>>>> 2a4d8c0bc7e06c0ed8498d37af099c47b4873421
     "title": [
-      "sliding",
-      "guru",
-      "studio",
+      ""
+    ],
+    "price": 8.9
+  },
+  {
+    "url": "https://media2.giphy.com/media/v1.Y2lkPTdlOTMwZjg3NDBydXppcmx4azMxc2w1eHk3ZTJiYmEzb3E3Ymp4ajV3MXE0cXdzZCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/9lQFXC7s76eojG5t6N/giphy-downsized-medium.gif",
+    "title": [
+      "I",
+      "Just",
+      "Shit",
+      "My",
+      "Pants",
       "GIF",
       "by",
-      "True",
-      "and",
-      "the",
-      "Rainbow",
-      "Kingdom"
+      "PERRIN"
     ],
+<<<<<<< HEAD
     "price": 1.3
   },
   {
     "url": "https://media1.giphy.com/media/v1.Y2lkPTdlOTMwZjg3bmc2ajZvM21sc3VvdXVwczAwYTNnNWZmcWNjNWtianUzYXBidnh6ciZlcD12MV9naWZzX3NlYXJjaCZjdD1n/l1JpwxDPHZmLo5Dgc/giphy.gif",
+=======
+    "price": 2.2
+  },
+  {
+    "url": "https://media2.giphy.com/media/v1.Y2lkPTdlOTMwZjg3NDBydXppcmx4azMxc2w1eHk3ZTJiYmEzb3E3Ymp4ajV3MXE0cXdzZCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/tRDsicNAWnLHO/giphy.gif",
+>>>>>>> 2a4d8c0bc7e06c0ed8498d37af099c47b4873421
     "title": [
-      "mushroom",
-      "house",
-      "cat",
+      "brix",
+      "shitting",
+      "GIF"
+    ],
+    "price": 3.4
+  },
+  {
+    "url": "https://media2.giphy.com/media/v1.Y2lkPTdlOTMwZjg3NDBydXppcmx4azMxc2w1eHk3ZTJiYmEzb3E3Ymp4ajV3MXE0cXdzZCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/3ohzgD8KvhV2waGDp6/giphy-downsized-medium.gif",
+    "title": [
+      "scared",
+      "big",
+      "brother",
       "GIF",
       "by",
+<<<<<<< HEAD
       "True",
       "and",
       "the",
@@ -258,22 +319,47 @@
     "title": [
       "Clifford",
       "The",
+=======
+>>>>>>> 2a4d8c0bc7e06c0ed8498d37af099c47b4873421
       "Big",
-      "Red",
-      "Dog",
-      "Spinning",
+      "Brother",
+      "After",
+      "Dark"
+    ],
+    "price": 5.4
+  },
+  {
+    "url": "https://media4.giphy.com/media/v1.Y2lkPTdlOTMwZjg3NDBydXppcmx4azMxc2w1eHk3ZTJiYmEzb3E3Ymp4ajV3MXE0cXdzZCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Y4sPmY4Dh9Tg8nSdQP/giphy.gif",
+    "title": [
+      "imacelebrityau",
       "GIF",
       "by",
-      "PBS",
-      "KIDS"
+      "I'm",
+      "A",
+      "Celebrity...",
+      "Get",
+      "Me",
+      "Out",
+      "Of",
+      "Here!",
+      "Australia"
     ],
+<<<<<<< HEAD
     "price": 8.1
   },
   {
     "url": "https://media2.giphy.com/media/v1.Y2lkPTdlOTMwZjg3bmc2ajZvM21sc3VvdXVwczAwYTNnNWZmcWNjNWtianUzYXBidnh6ciZlcD12MV9naWZzX3NlYXJjaCZjdD1n/dUOLuOYSMe0QNCRoQQ/giphy.gif",
+=======
+    "price": 5.6
+  },
+  {
+    "url": "https://media0.giphy.com/media/v1.Y2lkPTdlOTMwZjg3NDBydXppcmx4azMxc2w1eHk3ZTJiYmEzb3E3Ymp4ajV3MXE0cXdzZCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/5nMLyMet6CSgU/giphy.gif",
+>>>>>>> 2a4d8c0bc7e06c0ed8498d37af099c47b4873421
     "title": [
-      ""
+      "face",
+      "GIF"
     ],
+<<<<<<< HEAD
     "price": 8
   },
   {
@@ -289,18 +375,41 @@
       "best",
       "friends",
       "cat",
+=======
+    "price": 8.2
+  },
+  {
+    "url": "https://media2.giphy.com/media/v1.Y2lkPTdlOTMwZjg3NDBydXppcmx4azMxc2w1eHk3ZTJiYmEzb3E3Ymp4ajV3MXE0cXdzZCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/A99izvwSp6zFGmQlbe/giphy-downsized-medium.gif",
+    "title": [
+      "Naked",
+      "And",
+      "Afraid",
+      "Survival",
+>>>>>>> 2a4d8c0bc7e06c0ed8498d37af099c47b4873421
       "GIF",
       "by",
-      "PBS",
-      "KIDS"
+      "Discovery"
     ],
+<<<<<<< HEAD
     "price": 6
   },
   {
     "url": "https://media0.giphy.com/media/v1.Y2lkPTdlOTMwZjg3bmc2ajZvM21sc3VvdXVwczAwYTNnNWZmcWNjNWtianUzYXBidnh6ciZlcD12MV9naWZzX3NlYXJjaCZjdD1n/IhftC3sRFWIbDaauCa/giphy.gif",
+=======
+    "price": 4.3
+  },
+  {
+    "url": "https://media0.giphy.com/media/v1.Y2lkPTdlOTMwZjg3NDBydXppcmx4azMxc2w1eHk3ZTJiYmEzb3E3Ymp4ajV3MXE0cXdzZCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/ToMjGpNG8h7Ax8Iq6Mo/giphy.gif",
+>>>>>>> 2a4d8c0bc7e06c0ed8498d37af099c47b4873421
     "title": [
-      ""
+      "al",
+      "roker",
+      "pooped",
+      "my",
+      "pants",
+      "GIF"
     ],
+<<<<<<< HEAD
     "price": 1.5
   },
   {
@@ -316,43 +425,265 @@
       "i",
       "love",
       "you",
+=======
+    "price": 9
+  },
+  {
+    "url": "https://media1.giphy.com/media/v1.Y2lkPTdlOTMwZjg3NDBydXppcmx4azMxc2w1eHk3ZTJiYmEzb3E3Ymp4ajV3MXE0cXdzZCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/l0Excb5BoNkuY7UMU/giphy.gif",
+    "title": [
+      "tom",
+      "brady",
+      "conan",
+      "obrien",
+>>>>>>> 2a4d8c0bc7e06c0ed8498d37af099c47b4873421
       "GIF",
       "by",
-      "PBS",
-      "KIDS"
+      "Team",
+      "Coco"
     ],
     "price": 6.6
   },
   {
+<<<<<<< HEAD
     "url": "https://media1.giphy.com/media/v1.Y2lkPTdlOTMwZjg3bmc2ajZvM21sc3VvdXVwczAwYTNnNWZmcWNjNWtianUzYXBidnh6ciZlcD12MV9naWZzX3NlYXJjaCZjdD1n/3ohs86cugEKCgOhydW/giphy.gif",
+=======
+    "url": "https://media1.giphy.com/media/v1.Y2lkPTdlOTMwZjg3NDBydXppcmx4azMxc2w1eHk3ZTJiYmEzb3E3Ymp4ajV3MXE0cXdzZCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Qy2jdiwGbBuDno9lUd/giphy.gif",
+>>>>>>> 2a4d8c0bc7e06c0ed8498d37af099c47b4873421
     "title": [
-      "merry",
-      "christmas",
-      "netflix",
       "GIF",
       "by",
-      "True",
-      "and",
-      "the",
-      "Rainbow",
-      "Kingdom"
+      "I'm",
+      "A",
+      "Celebrity...",
+      "Get",
+      "Me",
+      "Out",
+      "Of",
+      "Here!",
+      "Australia"
     ],
+<<<<<<< HEAD
     "price": 3.7
   },
   {
     "url": "https://media2.giphy.com/media/v1.Y2lkPTdlOTMwZjg3bmc2ajZvM21sc3VvdXVwczAwYTNnNWZmcWNjNWtianUzYXBidnh6ciZlcD12MV9naWZzX3NlYXJjaCZjdD1n/1oFZDQ4UW4J7ozJ4gs/giphy.gif",
+=======
+    "price": 6.5
+  },
+  {
+    "url": "https://media4.giphy.com/media/v1.Y2lkPTdlOTMwZjg3NDBydXppcmx4azMxc2w1eHk3ZTJiYmEzb3E3Ymp4ajV3MXE0cXdzZCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/3oz8xUF39XAIyNQ5UI/giphy.gif",
+>>>>>>> 2a4d8c0bc7e06c0ed8498d37af099c47b4873421
     "title": [
-      "Sliding",
-      "Guru",
-      "Studio",
+      "eric",
+      "cartman",
+      "poop",
       "GIF",
       "by",
-      "True",
-      "and",
-      "the",
-      "Rainbow",
-      "Kingdom"
+      "South",
+      "Park",
+      ""
+    ],
+<<<<<<< HEAD
+    "price": 3.4
+=======
+    "price": 5.4
+  },
+  {
+    "url": "https://media3.giphy.com/media/v1.Y2lkPTdlOTMwZjg3NDBydXppcmx4azMxc2w1eHk3ZTJiYmEzb3E3Ymp4ajV3MXE0cXdzZCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/3o6fJ2UM1IDRNwsiJi/giphy.gif",
+    "title": [
+      "uh",
+      "oh",
+      "animation",
+      "GIF",
+      "by",
+      "Nickel",
+      "Joints"
+    ],
+    "price": 3.9
+  },
+  {
+    "url": "https://media4.giphy.com/media/v1.Y2lkPTdlOTMwZjg3NDBydXppcmx4azMxc2w1eHk3ZTJiYmEzb3E3Ymp4ajV3MXE0cXdzZCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/EnSDeu36LQ5X194387/giphy.gif",
+    "title": [
+      "Scared",
+      "Mafs",
+      "GIF",
+      "by",
+      "Married",
+      "At",
+      "First",
+      "Sight"
+    ],
+    "price": 3.9
+  },
+  {
+    "url": "https://media2.giphy.com/media/v1.Y2lkPTdlOTMwZjg3NDBydXppcmx4azMxc2w1eHk3ZTJiYmEzb3E3Ymp4ajV3MXE0cXdzZCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/bOk08WTq5bH3E4SSkd/giphy.gif",
+    "title": [
+      "The",
+      "Good",
+      "Place",
+      "Poop",
+      "GIF",
+      "by",
+      "BuzzFeed"
+    ],
+    "price": 2.6
+  },
+  {
+    "url": "https://media2.giphy.com/media/v1.Y2lkPTdlOTMwZjg3NDBydXppcmx4azMxc2w1eHk3ZTJiYmEzb3E3Ymp4ajV3MXE0cXdzZCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/YT7ehana7Y0O6lKNQz/giphy-downsized-medium.gif",
+    "title": [
+      "Twd",
+      "Poop",
+      "GIF",
+      "by",
+      "The",
+      "Walking",
+      "Dead"
+    ],
+    "price": 9.1
+  },
+  {
+    "url": "https://media2.giphy.com/media/v1.Y2lkPTdlOTMwZjg3NDBydXppcmx4azMxc2w1eHk3ZTJiYmEzb3E3Ymp4ajV3MXE0cXdzZCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/5MWaPfzOwI92A0UojP/giphy.gif",
+    "title": [
+      "Poop",
+      "Prank",
+      "GIF",
+      "by",
+      "BuzzFeed"
+    ],
+    "price": 3.7
+  },
+  {
+    "url": "https://media3.giphy.com/media/v1.Y2lkPTdlOTMwZjg3NDBydXppcmx4azMxc2w1eHk3ZTJiYmEzb3E3Ymp4ajV3MXE0cXdzZCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/hu6bJnuumEYB5OTkcf/giphy.gif",
+    "title": [
+      "Sick",
+      "Toilet",
+      "Paper",
+      "GIF",
+      "by",
+      "Tricia",
+      "",
+      "Grace"
+    ],
+    "price": 4.7
+  },
+  {
+    "url": "https://media0.giphy.com/media/v1.Y2lkPTdlOTMwZjg3NDBydXppcmx4azMxc2w1eHk3ZTJiYmEzb3E3Ymp4ajV3MXE0cXdzZCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/pyGqlPMmop2A7H0Zto/giphy.gif",
+    "title": [
+      "Nervous",
+      "Comedy",
+      "GIF",
+      "by",
+      "Deadstream"
+    ],
+    "price": 8.9
+  },
+  {
+    "url": "https://media2.giphy.com/media/v1.Y2lkPTdlOTMwZjg3NDBydXppcmx4azMxc2w1eHk3ZTJiYmEzb3E3Ymp4ajV3MXE0cXdzZCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/7jcbzI3xwtRKZc7SP6/giphy-downsized-medium.gif",
+    "title": [
+      "Poop",
+      "Prank",
+      "GIF",
+      "by",
+      "BuzzFeed"
+    ],
+    "price": 4.4
+  },
+  {
+    "url": "https://media3.giphy.com/media/v1.Y2lkPTdlOTMwZjg3NDBydXppcmx4azMxc2w1eHk3ZTJiYmEzb3E3Ymp4ajV3MXE0cXdzZCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/NjgsMQfK89SJ4BUbbc/giphy.gif",
+    "title": [
+      "Scared",
+      "Big",
+      "Brother",
+      "GIF",
+      "by",
+      "Big",
+      "Brother",
+      "Australia"
+    ],
+    "price": 2.2
+  },
+  {
+    "url": "https://media1.giphy.com/media/v1.Y2lkPTdlOTMwZjg3NDBydXppcmx4azMxc2w1eHk3ZTJiYmEzb3E3Ymp4ajV3MXE0cXdzZCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Uo3ud37hd0ehlvmNmr/giphy.gif",
+    "title": [
+      "Drag",
+      "Queen",
+      "Halloween",
+      "GIF",
+      "by",
+      "BouletBrothersDragula"
+    ],
+    "price": 8.4
+  },
+  {
+    "url": "https://media1.giphy.com/media/v1.Y2lkPTdlOTMwZjg3NDBydXppcmx4azMxc2w1eHk3ZTJiYmEzb3E3Ymp4ajV3MXE0cXdzZCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/l4JyU7VTxj2bpQiBO/giphy.gif",
+    "title": [
+      "ana",
+      "gasteyer",
+      "shit",
+      "my",
+      "pants",
+      "GIF",
+      "by",
+      "Team",
+      "Coco"
     ],
     "price": 3.4
+  },
+  {
+    "url": "https://media3.giphy.com/media/v1.Y2lkPTdlOTMwZjg3NDBydXppcmx4azMxc2w1eHk3ZTJiYmEzb3E3Ymp4ajV3MXE0cXdzZCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/DzHTurV1xXvuUqSiua/giphy.gif",
+    "title": [
+      "Nervous",
+      "Work",
+      "GIF",
+      "by",
+      "BuzzFeed"
+    ],
+    "price": 7
+  },
+  {
+    "url": "https://media4.giphy.com/media/v1.Y2lkPTdlOTMwZjg3NDBydXppcmx4azMxc2w1eHk3ZTJiYmEzb3E3Ymp4ajV3MXE0cXdzZCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Qrn4AU5EaRvjgdS3Nf/giphy.gif",
+    "title": [
+      "Scared",
+      "Oh",
+      "No",
+      "GIF"
+    ],
+    "price": 5.5
+  },
+  {
+    "url": "https://media3.giphy.com/media/v1.Y2lkPTdlOTMwZjg3NDBydXppcmx4azMxc2w1eHk3ZTJiYmEzb3E3Ymp4ajV3MXE0cXdzZCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/ugIjVRjbVfmgmDGntb/giphy.gif",
+    "title": [
+      "On",
+      "The",
+      "Spot",
+      "Oops",
+      "GIF",
+      "by",
+      "Rooster",
+      "Teeth"
+    ],
+    "price": 7.8
+  },
+  {
+    "url": "https://media4.giphy.com/media/v1.Y2lkPTdlOTMwZjg3NDBydXppcmx4azMxc2w1eHk3ZTJiYmEzb3E3Ymp4ajV3MXE0cXdzZCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/oCvoluL20r5ZRJfdLR/giphy.gif",
+    "title": [
+      "Im",
+      "A",
+      "Celebrity",
+      "Au",
+      "GIF",
+      "by",
+      "I'm",
+      "A",
+      "Celebrity...",
+      "Get",
+      "Me",
+      "Out",
+      "Of",
+      "Here!",
+      "Australia"
+    ],
+    "price": 3.7
+>>>>>>> 2a4d8c0bc7e06c0ed8498d37af099c47b4873421
   }
 ]
