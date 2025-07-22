@@ -2,6 +2,7 @@ import express from 'express';
 import path from 'path';
 import { writeFile, readFile } from 'fs/promises';
 import { fileURLToPath } from 'url';
+import { log } from 'console';
 
 // https://api.giphy.com/v1/gifs/search?api_key=JTQ5tRcYUqk9fTAmpaiMe85s9UTGPlJy&q=funny+cat&limit=5
 // JTQ5tRcYUqk9fTAmpaiMe85s9UTGPlJy
@@ -36,15 +37,22 @@ app.get('/api/gifs', async (req, res) => {
 
 
 app.get('/api/fromTo/:from/:to',async (req,res) => {
-try {    const from = req.params.from;
+try {    
+    const from = req.params.from;
     const to = req.params.to;
     let result = []
+    console.log(from,to);
+    
 
     const fileContent = await readFile(dataFile,"utf-8");
     const gifts = JSON.parse(fileContent);
-    for(let i = from; i > to ; i++ ){
+    
+    
+    for(let i = from; i <= to ; i++ ){
         result.push(gifts[i]);
     }
+    console.log(result);
+    
     res.status(200).json(result)
     }catch (err){
         console.error("error read file", err)

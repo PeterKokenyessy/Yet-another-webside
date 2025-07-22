@@ -1,31 +1,36 @@
-body{
+body {
   background-color: #9BA7BF;
   font-family: 'Intel One Mono', monospace;
   font-size: large;
 }
 
-.top-nav:hover{
-    color:#F2EFDF;
-    cursor: pointer;
-    text-decoration: underline;
+.top-nav:hover {
+  color: #F2EFDF;
+  cursor: pointer;
+  text-decoration: underline;
+}
+#topNavBar{
+  margin: 20px;
 }
 
 #container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 550px;
 }
 
-#left, #right {
+#left,
+#right {
   width: 50%;
   padding: 10px;
 }
 
-#left{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 300px;
+#left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
 }
 
 
@@ -34,19 +39,183 @@ body{
   color: #607EA6;
   width: 400px;
   height: 120px;
-  top: 150px;
-  left: 350px;
+  top: -50px;
+  left: 250px;
   background-image: radial-gradient(#000 1px, transparent 1px);
   background-size: 6px 6px;
-  z-index: 3;
+}
+.dots1{
+  position: absolute;
+  color: #607EA6;
+  width: 50px;
+  height: 50px;
+  top: 0px;
+  left: 0px;
+  background-image: radial-gradient(#000 1px, transparent 1px);
+  background-size: 6px 6px;
 }
 
-.text{
+.text {
+  position: relative;
   font-size: 30px;
 }
 
+#right {
+  position: relative;
+  width: 800px;
+  height: 500px;
+  margin: 50px auto;
+}
+
+.cards {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border: 4px solid #607EA6;
+  border: 4px solid hsla(0, 0%, 0%, 0.4);
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.search-wrapper {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 30px;
+  overflow: hidden;
+  width: 1000px;
+  height: 60px;
+  backdrop-filter: blur(6px);
+  margin: 20px auto;
+}
+
+.search-wrapper input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 0 20px;
+  font-size: 18px;
+  background: transparent;
+  color: #23260B;
+}
+
+.search-wrapper button {
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  color: #000;
+  padding: 0 20px;
+  cursor: pointer;
+  font-size: 16px;
+  height: 100%;
+  transition: background 0.2s;
+}
+
+.search-wrapper button:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
 
 
-
-
-
+.card0{
+position: absolute;
+top: 10px;
+left: 10px;
+}
+.card1{
+position: absolute;
+top: 80px;
+left: 10px;
+}
+.card2{
+position: absolute;
+top: 160px;
+left: 10px;
+}
+.card3{
+position: absolute;
+top: 10px;
+left: 80px;
+}
+.card4{
+position: absolute;
+top: 240px;
+left: 10px;
+}
+.card5{
+position: absolute;
+top: 320px;
+left: 10px;
+}
+.card6{
+position: absolute;
+top: 400px;
+left: 10px;
+}
+.card7{
+position: absolute;
+top: 400px;
+left: 80px;
+}
+.card8{
+position: absolute;
+top: 400px;
+left: 160px;
+}
+.card9{
+position: absolute;
+top: 400px;
+left: 240px;
+}
+.card10{
+position: absolute;
+top: 400px;
+left: 320px;
+}
+.card11{
+position: absolute;
+top: 320px;
+left: 80px;
+}
+.card12{
+position: absolute;
+top: 320px;
+left: 160px;
+}
+.card13{
+position: absolute;
+top: 160px;
+left: 160px;
+}
+.card14{
+position: absolute;
+top: 240px;
+left: 80px;
+}
+.card15{
+position: absolute;
+top: 240px;
+left: 160px;
+}
+.card16{
+position: absolute;
+top: 240px;
+left: 240px;
+}
+.card17{
+position: absolute;
+top: 240px;
+left: 320px;
+}
+.card18{
+position: absolute;
+top: 160px;
+left: 80px;
+}
+.card19{
+position: absolute;
+top: 240px;
+left: 400px;
+}
