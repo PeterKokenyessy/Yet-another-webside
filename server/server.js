@@ -65,6 +65,33 @@ app.post('/api/gifs', async (req, res) => {
         res.status(500).json({ error: 'Can not saved the file' });
     }
 });
+app.get('/api/details', async (req, res) => {
+    try {
+        const fileContent = await readFile(path.join(__dirname, '../data/api.json'), 'utf-8');
+        const apiData = JSON.parse(fileContent);
+        res.status(200).json(apiData);
+    } catch (err) {
+        console.error("Error reading API data", err);
+        res.status(500).json({ error: 'Failed to read API data.' });
+    }
+});
+app.post('/api/details', async (req, res) => {
+    try {
+        const { gifApiTopic, apiAllGifsDatas, maxLimit } = req.body;
+        const newData = {
+            gifApiTopic,
+            apiAllGifsDatas,
+            maxLimit
+        };
+        
+        await writeFile(path.join(__dirname, '../data/api.json'), JSON.stringify([newData], null, 2), 'utf-8');
+        res.status(200).json({ message: 'API data saved successfully.' });
+    } catch (err) {
+        console.error("Error saving API data", err);
+        res.status(500).json({ error: 'Failed to save API data.' });
+    }   
+});
+
 
 
 app.listen(PORT, function () {
