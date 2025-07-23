@@ -41,8 +41,6 @@ try {
     const from = req.params.from;
     const to = req.params.to;
     let result = []
-    console.log(from,to);
-    
 
     const fileContent = await readFile(dataFile,"utf-8");
     const gifts = JSON.parse(fileContent);
@@ -51,7 +49,7 @@ try {
     for(let i = from; i <= to ; i++ ){
         result.push(gifts[i]);
     }
-    console.log(result);
+ 
     
     res.status(200).json(result)
     }catch (err){
@@ -100,6 +98,41 @@ app.post('/api/details', async (req, res) => {
     }   
 });
 
+
+app.post('/api/gifs/add', async (req,res) => {
+    try {
+        const newProduct = req.body;
+
+        const fileContent = await readFile(dataFile, 'utf-8');
+        const currentProducts = JSON.parse(fileContent);
+
+        currentProducts.push(newProduct);
+
+        await writeFile(dataFile, JSON.stringify(currentProducts,null, 2), 'utf-8');
+        res.status(200).json({message: "product added"});
+    } catch (err) {
+        console.error("Error appending", err);
+        res.status(500).json({error: "failed to append"})
+    }
+});
+
+
+app.post('/api/gifs/remove', async (req, res) => {
+    try {
+        const { url } = req.body;
+
+        const fileContent = await readFile(dataFile, 'utf-8');
+        let products = JSON.parse(fileContent);
+
+        const filtered = products.filter(p => p.url !== url);
+
+        await writeFile(dataFile, JSON.stringify(filtered, null, 2), 'utf-8');
+        res.status(200).json({ message: "Product removed" });
+    } catch (err) {
+        console.error("Error removing product:", err);
+        res.status(500).json({ error: "Failed to remove product" });
+    }
+});
 
 
 app.listen(PORT, function () {
