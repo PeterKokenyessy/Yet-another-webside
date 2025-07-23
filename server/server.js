@@ -51,7 +51,7 @@ try {
     for(let i = from; i <= to ; i++ ){
         result.push(gifts[i]);
     }
-    console.log(result);
+   
     
     res.status(200).json(result)
     }catch (err){
