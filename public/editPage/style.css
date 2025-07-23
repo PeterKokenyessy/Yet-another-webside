@@ -1,4 +1,4 @@
-
+/* Alap beállítások */
 #main-body {
     display: flex;
     flex-direction: column;
@@ -8,7 +8,31 @@
     padding: 30px 0;
 }
 
+/* Kereső konténer */
+#search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
 
+.search-title {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+/* Keresősáv */
+#search-div {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Keresési eredmények (bal oldalon) */
 #gif-list {
     display: flex;
     flex-direction: column;
@@ -25,7 +49,15 @@
     gap: 20px;
 }
 
+#gif-list::-webkit-scrollbar {
+    width: 8px;
+}
+#gif-list::-webkit-scrollbar-thumb {
+    background: #d1d1d1;
+    border-radius: 4px;
+}
 
+/* Egyes gif-elemek */
 .product-item {
     display: flex;
     flex-direction: column;
@@ -37,15 +69,17 @@
     margin-bottom: 10px;
     width: 90%;
     box-shadow: 0 1px 4px rgba(0,0,0,0.05);
-    text-align: center; 
+    text-align: center;
 }
-
 
 .product-title {
     font-size: 1.2rem;
     font-weight: bold;
     margin: 10px 0 8px 0;
     text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .product-image {
@@ -58,6 +92,7 @@
     margin-bottom: 10px;
     box-shadow: 0 1px 6px rgba(0,0,0,0.07);
 }
+
 .product-price {
     font-size: 1rem;
     color: #333;
@@ -66,15 +101,7 @@
     text-align: center;
 }
 
-
-#gif-list::-webkit-scrollbar {
-    width: 8px;
-}
-#gif-list::-webkit-scrollbar-thumb {
-    background: #d1d1d1;
-    border-radius: 4px;
-}
-
+/* Gombok */
 .add-button {
     background-color: #4c7aaf;
     color: white;
@@ -89,7 +116,6 @@
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-
 .add-button:hover {
     background-color: rgb(75, 69, 160);
     transform: scale(1.05);
@@ -100,37 +126,99 @@
     transform: scale(0.98);
 }
 
-
-
-.collection-title {
-    color: white;
+/* Szerkesztő nézet: kereső + gif-list balra, collection jobbra */
+#editor-view {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    width: 100%;
+    max-width: 1200px;
     margin-top: 30px;
-    font-size: 1.5rem;
+    flex-wrap: wrap;
 }
 
-.collection-list {
+/* Gyűjtemény konténer (jobb oldal) */
+#collection-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-height: 700px;
+    width: 400px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    overflow-y: auto;
+}
+
+/* Gyűjtemény cím */
+.collection-title {
+    color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Lista: 3 oszlopos grid */
+#collection-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
     list-style: none;
     padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
+    margin: 0;
 }
 
+/* Egyes gyűjteményelemek */
 .collection-list li {
     background-color: #fefefe;
-    padding: 10px;
-    border-radius: 10px;
+    padding: 8px;
+    border-radius: 8px;
     box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    max-width: 150px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 180px;
+    overflow: hidden;
 }
 
-.remove-button {
+/* Kép */
+.collection-list li img {
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 6px;
+    flex-shrink: 0;
+}
+
+/* Ár */
+.collection-list li .product-price {
+    font-size: 0.7rem;
+    margin-bottom: 6px;
+    color: #333;
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Gomb (már nem absolute!) */
+.collection-list li .remove-button {
+    font-size: 0.7rem;
+    padding: 4px 8px;
     background-color: crimson;
     color: white;
     border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    margin-top: 5px;
     border-radius: 5px;
+    cursor: pointer;
+    margin-top: auto;
+}
+
+#gif-panel {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    gap: 15px;
 }
