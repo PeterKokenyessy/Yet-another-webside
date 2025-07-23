@@ -1,11 +1,10 @@
+let cart =[];
+
 async function main() {
     displayHomePage()
 
     const homeBtn = document.getElementById('nav-home');
     homeBtn.addEventListener('click', displayHomePage)
-
-    const categoryBtn = document.getElementById('nav-cat');
-    categoryBtn.addEventListener('click', categoryBtnEvent)
 
     const aboutBtn = document.getElementById('nav-ab');
     aboutBtn.addEventListener('click', aboutBtnEvent)
@@ -76,29 +75,66 @@ async function displayHomeMoreCard() { //refactoralni majd keresesre.
 
     for (const gif of gifes) {
         if (gif.url) {
+            const cardRoot = document.createElement('div');
+            cardRoot.classList.add('normalCard');
             const card = document.createElement('div');
-            card.classList.add('normalCard');
+            card.classList.add('cardContainer')
             card.innerHTML = gifDisplayStrucure(gif);
 
-            const cartBtn = document.getElementById('button');
+            const cartBtn = document.createElement('button');
+            cartBtn.textContent = "🍽️";
+            cartBtn.id = gif.id;
 
-            root.appendChild(card);
+            const btnAddedValidator = cart.some(e => e.id === gif.id);
+            if(btnAddedValidator){
+                cartBtn.classList.add('activeAdd');
+            }
+            
+            cartBtn.classList.add("cartBtn")
+            cartBtn.addEventListener('click',(e) => addToCartBtn(e))
+
+            card.appendChild(cartBtn)
+            cardRoot.appendChild(card);
+            root.appendChild(cardRoot);
         }
+    }
+}
+
+async function addToCartBtn (e){
+    const btn = e.target;
+    btn.classList.toggle('activeAdd');
+    const currentGif = await getGifById(btn.id);   
+    const existValidator = cart.some(e => e.id === currentGif.id);
+
+    if(!existValidator){
+        cart.push(currentGif);
+
+    } else {
+        cart = cart.filter(e => e.id !== currentGif.id)
+    }
+    console.log(cart);
+    
+}
+
+async function getGifById(id) {
+    try {
+        const res = await fetch(`/api/id/${id}`);
+        const body = await res.json();
+        return body;
+    } catch (err) {
+        console.log(err);        
     }
 }
 
 function gifDisplayStrucure(gif) {
     return `
-        <div class="cardContainer">
             <div class="cardImg">
                 <img src="${gif.url}" alt="gif">
             </div>
             <div class="tag">
                 <span>${gif.price}</span>
                 <span> $</span>
-            </div>
-            <button id="${gif.id}" class="cartBtn">🍽️</button>
-        </div>`;
+            </div>`;
 }
 
 window.addEventListener('load', main);

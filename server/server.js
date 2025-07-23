@@ -27,38 +27,55 @@ app.get('/api/gifs', async (req, res) => {
         const fileContent = await readFile(dataFile, 'utf-8');
         const gifs = JSON.parse(fileContent);
         res.status(200).json(gifs);
-        
-        
-    } catch (err){
+
+
+    } catch (err) {
         console.error("Error reading file", err)
-        res.status(500).json({error: "Failed to read gifs data"})
+        res.status(500).json({ error: "Failed to read gifs data" })
     }
 });
 
 
-app.get('/api/fromTo/:from/:to',async (req,res) => {
-try {    
-    const from = req.params.from;
-    const to = req.params.to;
-    let result = []
+app.get('/api/fromTo/:from/:to', async (req, res) => {
+    try {
+        const from = req.params.from;
+        const to = req.params.to;
+        let result = []
 
-    const fileContent = await readFile(dataFile,"utf-8");
-    const gifts = JSON.parse(fileContent);
-    
-    
-    for(let i = from; i <= to ; i++ ){
-        result.push(gifts[i]);
-    }
+        const fileContent = await readFile(dataFile, "utf-8");
+        const gifts = JSON.parse(fileContent);
 
-    
-    res.status(200).json(result)
-    }catch (err){
+
+        for (let i = from; i <= to; i++) {
+            result.push(gifts[i]);
+        }
+
+
+        res.status(200).json(result)
+    } catch (err) {
         console.error("error read file", err)
-        res.status(500).json({error: "Failed to read gifs data"})
+        res.status(500).json({ error: "Failed to read gifs data" })
     }
 })
 
+app.get('/api/id/:id', async (req, res) => {
+    try {
+        const id = req.params.id;
 
+        const fileContent = await readFile(dataFile, "utf-8");
+        const gifs = JSON.parse(fileContent);
+
+        const result = gifs.find(e => e.id == id);
+        if (result) {
+            res.status(200).json(result);
+        } else{
+            res.status(500).json('file dont file');
+        }
+    } catch (err) {
+        console.log(err);
+        res.status(500).json(err);
+    }
+})
 
 app.post('/api/gifs', async (req, res) => {
     try {
@@ -89,17 +106,17 @@ app.post('/api/details', async (req, res) => {
             apiAllGifsDatas,
             maxLimit
         };
-        
+
         await writeFile(path.join(__dirname, '../data/api.json'), JSON.stringify([newData], null, 2), 'utf-8');
         res.status(200).json({ message: 'API data saved successfully.' });
     } catch (err) {
         console.error("Error saving API data", err);
         res.status(500).json({ error: 'Failed to save API data.' });
-    }   
+    }
 });
 
 
-app.post('/api/gifs/add', async (req,res) => {
+app.post('/api/gifs/add', async (req, res) => {
     try {
         const newProduct = req.body;
 
@@ -108,11 +125,11 @@ app.post('/api/gifs/add', async (req,res) => {
 
         currentProducts.push(newProduct);
 
-        await writeFile(dataFile, JSON.stringify(currentProducts,null, 2), 'utf-8');
-        res.status(200).json({message: "product added"});
+        await writeFile(dataFile, JSON.stringify(currentProducts, null, 2), 'utf-8');
+        res.status(200).json({ message: "product added" });
     } catch (err) {
         console.error("Error appending", err);
-        res.status(500).json({error: "failed to append"})
+        res.status(500).json({ error: "failed to append" })
     }
 });
 
@@ -133,6 +150,8 @@ app.post('/api/gifs/remove', async (req, res) => {
         res.status(500).json({ error: "Failed to remove product" });
     }
 });
+
+
 
 
 app.listen(PORT, function () {
