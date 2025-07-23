@@ -10,16 +10,18 @@
 </head>
 
 <body id="main-body" style="background-color:#8368a5">
-    <form id="search-form">
+    <div id="search-div">
         <input type="text" id="search-input" placeholder="Search for gifs...">
-        <input type="maxlength="30" id="search-input-max-length" placeholder="Max length (optional)">
-        <button id = "search-button" type="submit">Search</button>
-    </form>
+        <input type="number" id="search-input-max-length" placeholder="Max length (optional)">
+        <button id = "search-button">Search</button>
+    </div>
 
     <div id="root">
         <div id="editor-view">
         <ul id="gif-list">
         </ul>
+        <h2 class="collection-title">Your Collection</h2>
+        <ul id="collection-list" class="collection-list"></ul>
     </div>
 </body>
 
