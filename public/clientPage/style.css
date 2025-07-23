@@ -163,6 +163,30 @@ border-radius: 8px;
   display: none;
 }
 
+.cartBtn{
+  position: relative;
+  display: none;
+  background-color: #607EA6;
+}
+.normalCard:hover .cartBtn{
+  display: block;
+  position: absolute;
+  align-content: center;
+  font-size: 20px;
+  width: auto;
+  height: auto;
+  bottom: 10px;
+  left: 10px;
+  padding: 6px;
+  border-radius: 50%;
+  border: none;
+}
+.cartBtn:hover{
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+
 .card0{
 position: absolute;
 top: 10px;

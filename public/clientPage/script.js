@@ -97,9 +97,7 @@ function gifDisplayStrucure(gif) {
                 <span>${gif.price}</span>
                 <span> $</span>
             </div>
-            <div>
-            <button id="${gif.id}"></button>
-            </div>
+            <button id="${gif.id}" class="cartBtn">🍽️</button>
         </div>`;
 }
 
