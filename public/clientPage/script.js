@@ -1,4 +1,10 @@
-let cart =[];
+
+
+let tempcart = JSON.parse(localStorage.getItem("cart"));
+let cart = [];
+ if(tempcart){
+    cart = tempcart;
+ }
 
 async function main() {
     displayHomePage()
@@ -52,7 +58,7 @@ async function displayHomePage() {
                 <div class="center">
                     <div class="text">Adj hangulatot az üzeneteidnek.<br>Kezdj egy gif-fel!
                         <div class="dots"></div>
-                        <div calss="dots1"></div>
+                        <div class="dots1"></div>
                     </div>
                 </div>
             </div>
@@ -100,7 +106,7 @@ async function displayHomeMoreCard() { //refactoralni majd keresesre.
     }
 }
 
-async function addToCartBtn (e){
+async function addToCartBtn (e){// le lehet ellenorizni az eloot is a dolgot mielott lehivod.
     const btn = e.target;
     btn.classList.toggle('activeAdd');
     const currentGif = await getGifById(btn.id);   
@@ -108,9 +114,10 @@ async function addToCartBtn (e){
 
     if(!existValidator){
         cart.push(currentGif);
-
+        localStorage.setItem('cart',JSON.stringify(cart));
     } else {
-        cart = cart.filter(e => e.id !== currentGif.id)
+        cart = cart.filter(e => e.id !== currentGif.id);
+        localStorage.setItem('cart',JSON.stringify(cart));
     }
     console.log(cart);
     
