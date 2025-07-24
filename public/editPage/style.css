@@ -1,16 +1,33 @@
-/* Alap beállítások */
 #main-body {
     display: flex;
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
-    background: #f7f7f7;
+    background: rgb(0, 0, 0);
     padding: 30px 0;
+    font-size: clamp(14px, 2vw, 18px);
+
+  background-image: url('images/background2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+    
 }
 
-/* Kereső konténer */
+/*
+html, body {
+  overflow: hidden;
+  height: 100%;
+}
+*/
+
+
+
+
 #search-container {
     display: flex;
+    border-radius: 5px;
+    border: 2px solid black;
     flex-direction: column;
     align-items: center;
     margin-bottom: 20px;
@@ -23,7 +40,7 @@
     margin-bottom: 10px;
 }
 
-/* Keresősáv */
+
 #search-div {
     display: flex;
     gap: 10px;
@@ -32,7 +49,6 @@
     flex-wrap: wrap;
 }
 
-/* Keresési eredmények (bal oldalon) */
 #gif-list {
     display: flex;
     flex-direction: column;
@@ -41,12 +57,13 @@
     max-height: 700px;
     overflow-y: auto;
     background: #fff;
-    border-radius: 12px;
     box-shadow: 0 2px 12px rgba(0,0,0,0.08);
     padding: 20px 0;
     margin: 0 auto;
     list-style: none;
     gap: 20px;
+    border-radius: 10px;
+    border: 2px solid black;
 }
 
 #gif-list::-webkit-scrollbar {
@@ -57,19 +74,24 @@
     border-radius: 4px;
 }
 
-/* Egyes gif-elemek */
+
 .product-item {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: center; 
+    justify-content: space-between;
     background: #f0f0f0;
     border-radius: 8px;
     padding: 16px 12px;
     margin-bottom: 10px;
     width: 90%;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     text-align: center;
+}
+
+.add-button {
+    margin-top: 10px;
+    margin: 10px auto 0 auto;
 }
 
 .product-title {
@@ -101,7 +123,7 @@
     text-align: center;
 }
 
-/* Gombok */
+
 .add-button {
     background-color: #4c7aaf;
     color: white;
@@ -112,7 +134,7 @@
     font-weight: 600;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    margin-top: 10px;
+    margin: 10px auto 0 auto; 
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -126,7 +148,8 @@
     transform: scale(0.98);
 }
 
-/* Szerkesztő nézet: kereső + gif-list balra, collection jobbra */
+.editor-title { color: white; }
+
 #editor-view {
     display: flex;
     justify-content: center;
@@ -138,7 +161,7 @@
     flex-wrap: wrap;
 }
 
-/* Gyűjtemény konténer (jobb oldal) */
+
 #collection-container {
     display: flex;
     flex-direction: column;
@@ -146,20 +169,28 @@
     max-height: 700px;
     width: 400px;
     background: #fff;
-    border-radius: 12px;
+    border-radius: 10px;
+    border: 2px solid black;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
     padding: 20px;
     overflow-y: auto;
+    margin-top: 40px;
 }
 
-/* Gyűjtemény cím */
+#collection-panel {
+    margin-top: -48px; 
+}
+
+
 .collection-title {
-    color: #333;
+    color: #000000;
     font-size: 1.2rem;
     margin-bottom: 10px;
+    text-align: center;
+    width: 100%;
 }
 
-/* Lista: 3 oszlopos grid */
+
 #collection-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -167,23 +198,26 @@
     list-style: none;
     padding: 0;
     margin: 0;
+    cursor: pointer;
 }
 
-/* Egyes gyűjteményelemek */
-.collection-list li {
+
+#collection-list li {
     background-color: #fefefe;
     padding: 8px;
     border-radius: 8px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     min-height: 180px;
     overflow: hidden;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
 }
 
-/* Kép */
+
 .collection-list li img {
     width: 100%;
     height: 80px;
@@ -193,7 +227,7 @@
     flex-shrink: 0;
 }
 
-/* Ár */
+
 .collection-list li .product-price {
     font-size: 0.7rem;
     margin-bottom: 6px;
@@ -204,16 +238,22 @@
     white-space: nowrap;
 }
 
-/* Gomb (már nem absolute!) */
+
 .collection-list li .remove-button {
-    font-size: 0.7rem;
+    all: unset; 
+    font-size: 0.8rem;
     padding: 4px 8px;
+    cursor: pointer;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    background-color: transparent;
+    color: black;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.collection-list li .remove-button:hover {
     background-color: crimson;
     color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: auto;
 }
 
 #gif-panel {
@@ -221,4 +261,148 @@
     flex-direction: column;
     width: 500px;
     gap: 15px;
+}
+
+
+
+input[type="text"],
+input[type="number"] {
+    padding: 10px 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+    color: #333;
+}
+
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border-color: #6f52b1;
+    box-shadow: 0 0 5px rgba(111, 82, 177, 0.4);
+}
+
+
+button {
+    padding: 10px 16px;
+    background-color: #6f52b1;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+
+button:hover {
+    background-color: #59429a;
+    transform: scale(1.03);
+}
+
+button:active {
+    background-color: #483680;
+    transform: scale(0.98);
+}
+
+
+#search-div,
+#collection-search-field {
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: nowrap;   
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    width: 100%;
+    
+}
+
+#search-div input,
+#collection-search-field input {
+    flex: 1;
+    min-width: 180px;
+}
+
+#search-div button,
+#collection-search-field button {
+    white-space: nowrap;
+}
+
+
+.hidden {
+  display: none !important;
+}
+
+
+#popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+
+.popup-customize {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 450px;
+  width: 90%;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.popup-header {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+
+.popup-customize input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+
+#popup-content img {
+  max-width: 100%;
+  margin: 10px 0;
+  border-radius: 8px;
+}
+
+
+.popup-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.popup-buttons button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #6a4dad;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.popup-buttons button:hover {
+  background-color: #5a3d94;
 }

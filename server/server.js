@@ -68,12 +68,47 @@ app.get('/api/id/:id', async (req, res) => {
         const result = gifs.find(e => e.id == id);
         if (result) {
             res.status(200).json(result);
-        } else{
+        } else {
             res.status(500).json('file dont file');
         }
     } catch (err) {
         console.log(err);
         res.status(500).json(err);
+    }
+})
+
+app.get('/api/search/:value', async (req, res) => {
+    try {
+        const value = decodeURIComponent(req.params.value);
+        console.log(value);
+        
+        const magicNumber = 60;
+
+        const fileContent = await readFile(dataFile, "utf-8");
+        const gifs = JSON.parse(fileContent);
+        let result = []
+        if(value !== "empty"){
+            result = gifs.filter(e => e.title.some(item =>item.toLowerCase() === value.toLowerCase()));
+        } else{
+            const usedIndex = new Set();
+            while (result.length < magicNumber && usedIndex.size < gifs.length) {
+                const index = Math.floor(Math.random() * gifs.length);
+                if (!usedIndex.has(index)) {
+                    usedIndex.add(index);
+                    result.push(gifs[index]);
+                }
+            }
+        }
+
+        if (result) {
+            res.status(200).json(result);
+        } else {
+            res.status(500).json(`not found ${value}`);
+        }
+    } catch (err) {
+        console.log(err);
+        res.status(500).json(err);
+
     }
 })
 

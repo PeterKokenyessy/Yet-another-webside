@@ -9,26 +9,54 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body id="main-body" style="background-color:#8368a5">
+<body id="main-body">
     <div id="root">
         <div id="editor-view">
-    <div id="gif-panel">
-        <div id="search-div">
-            <input type="text" id="search-input" placeholder="Search for gifs...">
-            <input type="number" id="search-input-max-length" placeholder="Max length (optional)">
-            <button id="search-button">Search</button>
+            <div id="gif-panel">
+                <div id="search-div">
+                    <input type="text" id="search-input" placeholder="Search for gifs...">
+                    <input type="number" id="search-input-max-length" placeholder="Max length (optional)">
+                    <button id="search-button">Search</button>
+                </div>
+
+                <ul id="gif-list"></ul>
+                <button id="collect-all-button" class="hidden">Add all</button>
+
+            </div>
+            <div id="collection-panel">
+                <h1 class="collection-title" style="color: #fff;">Your Collection</h1>
+                <div id="collection-search-field">
+                    <input type="text" id="collection-name-input" placeholder="Search by Title">
+                    <button id="collection-search-button">Search</button>
+                </div>
+                <div id="collection-container">
+                    <ul id="collection-list" class="collection-list"></ul>
+                </div>
+            </div>
         </div>
 
-        <ul id="gif-list"></ul>
+        <div id="popup-container" class="hidden">
+            <div id="popup-customize-div" class="popup-customize">
+                <h2 class="popup-header">Gif Details Customizer</h2>
+
+
+                <input type="text" id="new-title-input" placeholder="Enter new title">
+                <input type="number" id="new-price-input" placeholder="Enter new price">
+
+
+                <div id="popup-content"></div>
+
+
+                <div class="popup-buttons">
+                    <button id="save-changes-button">Save</button>
+                    <button id="close-popup-button">Close</button>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div id="collection-container">
-        <h2 class="collection-title">Your Collection</h2>
-        <ul id="collection-list" class="collection-list"></ul>
-    </div>
-</div>
 
-    </div>
+    
 </body>
 
 
